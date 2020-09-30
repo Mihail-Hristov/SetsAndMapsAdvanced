@@ -30,13 +30,9 @@ public class SetsOfElements {
             }
         }
 
-        firstSet.stream().forEach(e -> {
-            if (secondSet.contains(e)) {
-                finalSet.add(e);
-            }
-        });
+        firstSet.retainAll(secondSet);
 
-        for (int number : finalSet) {
+        for (int number : firstSet) {
             System.out.print(number + " ");
         }
     }
